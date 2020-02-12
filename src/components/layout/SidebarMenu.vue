@@ -13,7 +13,12 @@
         <span class="page">Tables</span>
       </a>
     </router-link>
-
+	<router-link tag="li" class="pageLink" to="/setting">
+      <a>
+        <i class="fa fa-cog"></i>
+        <span class="page">Settings</span>
+      </a>
+    </router-link>
     <li class="header">ME</li>
     <router-link tag="li" class="pageLink" to="/tasks">
       <a>
@@ -27,6 +32,7 @@
         <span class="page">Settings</span>
       </a>
     </router-link>
+	
     <li class="treeview">
       <a href="#">
         <i class="fa fa-folder-o"></i>
