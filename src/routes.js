@@ -4,6 +4,7 @@ import NotFoundView from './components/404.vue'
 
 // Import Views - Dash
 import DashboardView from './components/views/Dashboard.vue'
+import ExcelView from './components/views/Excel.vue'
 import TablesView from './components/views/Tables.vue'
 import TasksView from './components/views/Tasks.vue'
 import SettingView from './components/views/Setting.vue'
@@ -27,6 +28,12 @@ const routes = [
         component: DashboardView,
         name: 'Dashboard',
         meta: {description: 'Overview of environment'}
+      }, {
+        path: 'excel',
+        alias: '',
+        component: ExcelView,
+        name: 'Excel',
+        meta: {description: 'Excel vue'}
       }, {
         path: 'tables',
         component: TablesView,
