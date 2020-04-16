@@ -7,18 +7,44 @@
         <span class="page">Dashboard</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/tables">
+    <router-link tag="li" class="pageLink" to="/excel">
       <a>
-        <i class="fa fa-table"></i>
-        <span class="page">Tables</span>
-      </a>
-    </router-link>
-	<router-link tag="li" class="pageLink" to="/excel">
-      <a>
-        <i class="fa fa-table"></i>
+        <i class="fa fa-desktop"></i>
         <span class="page">Excel</span>
       </a>
     </router-link>
+    <router-link tag="li" class="pageLink" to="/chart">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">Chart</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/kategori-unit">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">Kategori Unit</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/data-dasar">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">Data Dasar</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/unit">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">Unit</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/capaian-unit">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">Capaian Unit</span>
+      </a>
+    </router-link>
+    
+
     <li class="header">ME</li>
     <router-link tag="li" class="pageLink" to="/tasks">
       <a>
@@ -32,7 +58,6 @@
         <span class="page">Settings</span>
       </a>
     </router-link>
-	
     <li class="treeview">
       <a href="#">
         <i class="fa fa-folder-o"></i>
