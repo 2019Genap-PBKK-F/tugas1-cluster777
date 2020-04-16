@@ -13,8 +13,8 @@ import jexcel from 'jexcel'
 import 'jexcel/dist/jexcel.css'
 import axios from 'axios'
 
-// var host = 'http://10.199.14.46:8009/'
-var host = 'http://127.0.0.1:8009/'
+var host = 'http://10.199.14.46:8009/'
+// var host = 'http://127.0.0.1:8009/'
 
 export default {
   // name: 'App',

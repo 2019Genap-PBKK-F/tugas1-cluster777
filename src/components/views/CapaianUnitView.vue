@@ -14,12 +14,12 @@ import 'jexcel/dist/jexcel.css'
 import axios from 'axios'
 
 // var host = 'http://10.199.14.46:8009/'
-// var dropdownDataDasar = 'http://10.199.14.46:8009/api/data-dasar/nama/'
-// var dropdownUnit = 'http://10.199.14.46:8009/api/nama-unit/'
-// var host = 'http://10.199.14.46:8009/api/capaian-unit/'
-var dropdownDataDasar = 'http://127.0.0.1:8009/api/data-dasar/nama/'
-var dropdownUnit = 'http://127.0.0.1:8009/api/nama-unit/'
-var host = 'http://127.0.0.1:8009/api/capaian-unit/'
+var dropdownDataDasar = 'http://10.199.14.46:8009/api/data-dasar/nama/'
+var dropdownUnit = 'http://10.199.14.46:8009/api/nama-unit/'
+var host = 'http://10.199.14.46:8009/api/capaian-unit/'
+// var dropdownDataDasar = 'http://127.0.0.1:8009/api/data-dasar/nama/'
+// var dropdownUnit = 'http://127.0.0.1:8009/api/nama-unit/'
+// var host = 'http://127.0.0.1:8009/api/capaian-unit/'
 
 export default {
   // name: 'App',
