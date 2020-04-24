@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     load() {
-      axios.get(host + 'api/DataDasar/').then(res => {
+      axios.get(host + 'api/JenisSatker/').then(res => {
         console.log(res.data)
         var jexcelOptions = {
           data: res.data,
@@ -53,16 +53,16 @@ export default {
       })
     },
     newRow() {
-      axios.post(host + 'api/DataDasar/', this.form).then(res => {
+      axios.post(host + 'api/JenisSatker/', this.form).then(res => {
         console.log(res.data)
       })
     },
     updateRow(instance, cell, columns, row, value) {
-      axios.get(host + 'api/DataDasar/').then(res => {
+      axios.get(host + 'api/JenisSatker/').then(res => {
         var index = Object.values(res.data[row])
         index[columns] = value
         console.log(index)
-        axios.put(host + 'api/DataDasar/' + index[0], {
+        axios.put(host + 'api/JenisSatker/' + index[0], {
           id: index[0],
           nama: index[1]
         }).then(res => {
@@ -71,11 +71,11 @@ export default {
       })
     },
     deleteRow(instance, row) {
-      axios.get(host + 'api/DataDasar/').then(res => {
+      axios.get(host + 'api/JenisSatker/').then(res => {
         var index = Object.values(res.data[row])
         // console.log(index)
         console.log(row)
-        axios.delete(host + 'api/DataDasar/' + index[0])
+        axios.delete(host + 'api/JenisSatker/' + index[0])
       })
     }
   }

@@ -13,37 +13,72 @@
         <span class="page">Excel</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/chart">
+    <router-link tag="li" class="pageLink" to="/DataDasarView">
       <a>
         <i class="fa fa-desktop"></i>
-        <span class="page">Chart</span>
+        <span class="page">DataDasarView</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/kategori-unit">
+    <router-link tag="li" class="pageLink" to="/JenisSatkerView">
       <a>
         <i class="fa fa-desktop"></i>
-        <span class="page">Kategori Unit</span>
+        <span class="page">JenisSatkerView</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/data-dasar">
+	<router-link tag="li" class="pageLink" to="/AspekView">
       <a>
         <i class="fa fa-desktop"></i>
-        <span class="page">Data Dasar</span>
+        <span class="page">AspekView</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/unit">
+    <router-link tag="li" class="pageLink" to="/MasterIndikatorView">
       <a>
         <i class="fa fa-desktop"></i>
-        <span class="page">Unit</span>
+        <span class="page">MasterIndikatorView</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/capaian-unit">
+    <router-link tag="li" class="pageLink" to="/PeriodeView">
       <a>
         <i class="fa fa-desktop"></i>
-        <span class="page">Capaian Unit</span>
+        <span class="page">PeriodeView</span>
       </a>
     </router-link>
-    
+    <router-link tag="li" class="pageLink" to="/MasterIndikatorFullView">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">MasterIndikatorFullView</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/Indikator_PeriodeView">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">Indikator_PeriodeView</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/SatuanKerjaView">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">SatuanKerjaView</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/Capaian_UnitView">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">Capaian_UnitView</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/Indikator_SatuanKerjaView">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">Indikator_SatuanKerjaView</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/Indikator_SatuanKerja_LogView">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">Indikator_SatuanKerja_LogView</span>
+      </a>
+    </router-link>
 
     <li class="header">ME</li>
     <router-link tag="li" class="pageLink" to="/tasks">

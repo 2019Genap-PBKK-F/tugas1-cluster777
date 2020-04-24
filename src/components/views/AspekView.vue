@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     load() {
-      axios.get(host + 'api/DataDasar/').then(res => {
+      axios.get(host + 'api/Aspek/').then(res => {
         console.log(res.data)
         var jexcelOptions = {
           data: res.data,
@@ -42,10 +42,9 @@ export default {
           responsive: true,
           columns: [
             { type: 'hidden', title: 'id', width: '10px' },
-            { type: 'text', title: 'nama', width: '120px' },
-            { type: 'text', title: 'create_date', width: '120px' },
-            { type: 'text', title: 'last_update', width: '120px' },
-            { type: 'text', title: 'expired_date', width: '120px' }
+            { type: 'text', title: 'aspek', width: '120px' },
+            { type: 'text', title: 'komponen_aspek', width: '120px' }
+
           ]
         }
         let spreadsheet = jexcel(this.$el, jexcelOptions)
@@ -53,29 +52,30 @@ export default {
       })
     },
     newRow() {
-      axios.post(host + 'api/DataDasar/', this.form).then(res => {
+      axios.post(host + 'api/Aspek/', this.form).then(res => {
         console.log(res.data)
       })
     },
     updateRow(instance, cell, columns, row, value) {
-      axios.get(host + 'api/DataDasar/').then(res => {
+      axios.get(host + 'api/Aspek/').then(res => {
         var index = Object.values(res.data[row])
         index[columns] = value
         console.log(index)
-        axios.put(host + 'api/DataDasar/' + index[0], {
+        axios.put(host + 'api/Aspek/' + index[0], {
           id: index[0],
-          nama: index[1]
+          aspek: index[1],
+          komponen_aspek: index[2]
         }).then(res => {
           console.log(res.data)
         })
       })
     },
     deleteRow(instance, row) {
-      axios.get(host + 'api/DataDasar/').then(res => {
+      axios.get(host + 'api/Aspek/').then(res => {
         var index = Object.values(res.data[row])
         // console.log(index)
         console.log(row)
-        axios.delete(host + 'api/DataDasar/' + index[0])
+        axios.delete(host + 'api/Aspek/' + index[0])
       })
     }
   }

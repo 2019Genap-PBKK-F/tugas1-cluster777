@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     load() {
-      axios.get(host + 'api/DataDasar/').then(res => {
+      axios.get(host + 'api/Indikator_SatuanKerja_Log/').then(res => {
         console.log(res.data)
         var jexcelOptions = {
           data: res.data,
@@ -41,11 +41,10 @@ export default {
           ondeleterow: this.deleteRow,
           responsive: true,
           columns: [
-            { type: 'hidden', title: 'id', width: '10px' },
-            { type: 'text', title: 'nama', width: '120px' },
-            { type: 'text', title: 'create_date', width: '120px' },
-            { type: 'text', title: 'last_update', width: '120px' },
-            { type: 'text', title: 'expired_date', width: '120px' }
+
+            { type: 'hidden', title: 'id_indikator_satker', width: '10px' },
+            { type: 'text', title: 'capaian', width: '120px' },
+            { type: 'text', title: 'create_date', width: '120px' }
           ]
         }
         let spreadsheet = jexcel(this.$el, jexcelOptions)
@@ -53,29 +52,29 @@ export default {
       })
     },
     newRow() {
-      axios.post(host + 'api/DataDasar/', this.form).then(res => {
+      axios.post(host + 'api/Indikator_SatuanKerja_Log/', this.form).then(res => {
         console.log(res.data)
       })
     },
     updateRow(instance, cell, columns, row, value) {
-      axios.get(host + 'api/DataDasar/').then(res => {
+      axios.get(host + 'api/Indikator_SatuanKerja_Log/').then(res => {
         var index = Object.values(res.data[row])
         index[columns] = value
         console.log(index)
-        axios.put(host + 'api/DataDasar/' + index[0], {
-          id: index[0],
-          nama: index[1]
+        axios.put(host + 'api/Indikator_SatuanKerja_Log/' + index[0], {
+          id_indikator_satker: index[0],
+          capaian: index[1]
         }).then(res => {
           console.log(res.data)
         })
       })
     },
     deleteRow(instance, row) {
-      axios.get(host + 'api/DataDasar/').then(res => {
+      axios.get(host + 'api/Indikator_SatuanKerja_Log/').then(res => {
         var index = Object.values(res.data[row])
         // console.log(index)
         console.log(row)
-        axios.delete(host + 'api/DataDasar/' + index[0])
+        axios.delete(host + 'api/Indikator_SatuanKerja/' + index[0])
       })
     }
   }

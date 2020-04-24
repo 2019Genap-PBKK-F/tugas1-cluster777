@@ -5,18 +5,25 @@ import NotFoundView from './components/404.vue'
 // Import Views - Dash
 import DashboardView from './components/views/Dashboard.vue'
 import ExcelView from './components/views/Excel.vue'
-import ChartView from './components/views/Chart.vue'
+
 import TasksView from './components/views/Tasks.vue'
 import SettingView from './components/views/Setting.vue'
 import AccessView from './components/views/Access.vue'
 import ServerView from './components/views/Server.vue'
 import ReposView from './components/views/Repos.vue'
 
+import AspekView from './components/views/AspekView.vue'
 import DataDasarView from './components/views/DataDasarView.vue'
-import UnitView from './components/views/UnitView.vue'
-import KategoriUnitView from './components/views/KategoriUnitVIew.vue'
-import CapaianUnitVIew from './components/views/CapaianUnitVIew.vue'
 
+import JenisSatkerView from './components/views/JenisSatkerView.vue'
+import MasterIndikatorView from './components/views/MasterIndikatorView.vue'
+import PeriodeView from './components/views/PeriodeView.vue'
+import IndikatorPeriodeView from './components/views/Indikator_PeriodeView.vue'
+import SatuanKerjaView from './components/views/SatuanKerjaView.vue'
+import CapaianUnitView from './components/views/Capaian_UnitView.vue'
+import IndikatorSatuanKerjaView from './components/views/Indikator_SatuanKerjaView.vue'
+import IndikatorSatuanKerjaLogView from './components/views/Indikator_SatuanKerja_LogView.vue'
+import MasterIndikatorFullView from './components/views/MasterIndikatorFullView.vue'
 // Routes
 const routes = [
   {
@@ -39,30 +46,60 @@ const routes = [
         name: 'Excel',
         meta: {description: 'Excel in CoPilot'}
       }, {
-        path: 'chart',
-        component: ChartView,
-        name: 'Chart',
-        meta: {description: 'Chart in CoPilot'}
-      }, {
-        path: 'kategori-unit',
-        component: KategoriUnitView,
-        name: 'Kategori Unit',
-        meta: {description: 'Kategori Unit in CoPilot'}
-      }, {
-        path: 'data-dasar',
+        path: 'DataDasarView',
         component: DataDasarView,
-        name: 'Data Dasar',
-        meta: {description: 'Data Dasar in CoPilot'}
+        name: 'DataDasarView',
+        meta: {description: 'DataDasarView in CoPilot'}
       }, {
-        path: 'unit',
-        component: UnitView,
-        name: 'Unit',
-        meta: {description: 'Unit in CoPilot'}
+        path: 'AspekView',
+        component: AspekView,
+        name: 'AspekView',
+        meta: {description: 'AspekView in CoPilot'}
       }, {
-        path: 'capaian-unit',
-        component: CapaianUnitVIew,
-        name: 'Capaian Unit',
-        meta: {description: 'Capaian Unit in CoPilot'}
+        path: 'MasterIndikatorFullView',
+        component: MasterIndikatorFullView,
+        name: 'MasterIndikatorFullView',
+        meta: {description: 'MasterIndikatorFullView in CoPilot'}
+      }, {
+        path: 'JenisSatkerView',
+        component: JenisSatkerView,
+        name: 'JenisSatkerView',
+        meta: {description: 'JenisSatkerView in CoPilot'}
+      }, {
+        path: 'MasterIndikatorView',
+        component: MasterIndikatorView,
+        name: 'MasterIndikatorView',
+        meta: {description: 'MasterIndikatorView in CoPilot'}
+      }, {
+        path: 'PeriodeView',
+        component: PeriodeView,
+        name: 'PeriodeView',
+        meta: {description: 'PeriodeView in CoPilot'}
+      }, {
+        path: 'Indikator_PeriodeView',
+        component: IndikatorPeriodeView,
+        name: 'Indikator_PeriodeView',
+        meta: {description: 'Indikator_PeriodeView in CoPilot'}
+      }, {
+        path: 'SatuanKerjaView',
+        component: SatuanKerjaView,
+        name: 'SatuanKerjaView',
+        meta: {description: 'SatuanKerjaView in CoPilot'}
+      }, {
+        path: 'Capaian_UnitView',
+        component: CapaianUnitView,
+        name: 'Capaian_UnitView',
+        meta: {description: 'Capaian_UnitView in CoPilot'}
+      }, {
+        path: 'Indikator_SatuanKerjaView',
+        component: IndikatorSatuanKerjaView,
+        name: 'Indikator_SatuanKerjaView',
+        meta: {description: 'Indikator_SatuanKerjaView in CoPilot'}
+      }, {
+        path: 'Indikator_SatuanKerja_LogView',
+        component: IndikatorSatuanKerjaLogView,
+        name: 'Indikator_SatuanKerja_LogView',
+        meta: {description: 'Indikator_SatuanKerja_LogView in CoPilot'}
       }, {
         path: 'tasks',
         component: TasksView,
