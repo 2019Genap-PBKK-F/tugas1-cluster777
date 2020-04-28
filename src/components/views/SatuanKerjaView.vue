@@ -13,8 +13,8 @@ import jexcel from 'jexcel'
 import 'jexcel/dist/jexcel.css'
 import axios from 'axios'
 
-// var host = 'http://10.199.14.46:8009/'
-var host = 'http://127.0.0.1:8009/'
+var host = 'http://10.199.14.46:8009/'
+// var host = 'http://127.0.0.1:8009/'
 
 export default {
   // name: 'App',
@@ -41,8 +41,8 @@ export default {
           ondeleterow: this.deleteRow,
           responsive: true,
           columns: [
-            { type: 'hidden', title: 'id', width: '10px' },
-            { type: 'hidden', title: 'id_satker', width: '10px' },
+            { type: 'text', title: 'id', width: '10px' },
+
             { type: 'text', title: 'id_ins_satker', width: '120px' },
             { type: 'text', title: 'id_induk_satker', width: '120px' },
             { type: 'text', title: 'nama', width: '120px' },
