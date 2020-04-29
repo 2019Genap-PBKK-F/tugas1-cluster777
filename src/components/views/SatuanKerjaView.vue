@@ -72,7 +72,7 @@ export default {
           id_induk_satker: index[2],
           nama: index[3],
           email: index[8],
-		  level_unit: index[4]
+		      level_unit: index[4]
         }).then(res => {
           console.log(res.data)
         })
