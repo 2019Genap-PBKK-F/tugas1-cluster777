@@ -49,7 +49,7 @@ export default {
             { type: 'text', title: 'create_date', width: '120px' },
             { type: 'text', title: 'last_update', width: '120px' },
             { type: 'text', title: 'expired_date', width: '120px' },
-			{ type: 'text', title: 'email', width: '120px' }
+			      { type: 'text', title: 'email', width: '120px' }
           ]
         }
         let spreadsheet = jexcel(this.$el, jexcelOptions)
