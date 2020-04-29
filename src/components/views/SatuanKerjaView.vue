@@ -42,14 +42,14 @@ export default {
           responsive: true,
           columns: [
             { type: 'text', title: 'id', width: '10px' },
-
             { type: 'text', title: 'id_ins_satker', width: '120px' },
             { type: 'text', title: 'id_induk_satker', width: '120px' },
             { type: 'text', title: 'nama', width: '120px' },
-            { type: 'text', title: 'email', width: '120px' },
+            { type: 'text', title: 'level_unit', width: '120px' },
             { type: 'text', title: 'create_date', width: '120px' },
             { type: 'text', title: 'last_update', width: '120px' },
-            { type: 'text', title: 'expired_date', width: '120px' }
+            { type: 'text', title: 'expired_date', width: '120px' },
+			{ type: 'text', title: 'email', width: '120px' }
           ]
         }
         let spreadsheet = jexcel(this.$el, jexcelOptions)
@@ -68,10 +68,11 @@ export default {
         console.log(index)
         axios.put(host + 'api/SatuanKerja/' + index[0], {
           id: index[0],
-          id_ins_satker: index[2],
-          id_induk_satker: index[3],
-          nama: index[4],
-          email: index[5]
+          id_ins_satker: index[1],
+          id_induk_satker: index[2],
+          nama: index[3],
+          email: index[8],
+		  level_unit: index[4]
         }).then(res => {
           console.log(res.data)
         })
