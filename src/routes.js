@@ -24,6 +24,11 @@ import CapaianUnitView from './components/views/Capaian_UnitView.vue'
 import IndikatorSatuanKerjaView from './components/views/Indikator_SatuanKerjaView.vue'
 import IndikatorSatuanKerjaLogView from './components/views/Indikator_SatuanKerja_LogView.vue'
 import MasterIndikatorFullView from './components/views/MasterIndikatorFullView.vue'
+
+import publikasiView from './components/views/publikasiView.vue'
+import abmasView from './components/views/abmasView.vue'
+import dosenView from './components/views/dosenView.vue'
+import penelitianView from './components/views/penelitianView.vue'
 // Routes
 const routes = [
   {
@@ -50,6 +55,26 @@ const routes = [
         component: DataDasarView,
         name: 'DataDasarView',
         meta: {description: 'DataDasarView in CoPilot'}
+      }, {
+        path: 'publikasiView',
+        component: publikasiView,
+        name: 'publikasiView',
+        meta: {description: 'publikasiView in CoPilot'}
+      }, {
+        path: 'abmasView',
+        component: abmasView,
+        name: 'abmasView',
+        meta: {description: 'abmasView in CoPilot'}
+      }, {
+        path: 'dosenView',
+        component: dosenView,
+        name: 'dosenView',
+        meta: {description: 'dosenView in CoPilot'}
+      }, {
+        path: 'penelitianView',
+        component: penelitianView,
+        name: 'penelitianView',
+        meta: {description: 'penelitianView in CoPilot'}
       }, {
         path: 'AspekView',
         component: AspekView,

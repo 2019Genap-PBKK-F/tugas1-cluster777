@@ -19,6 +19,30 @@
         <span class="page">DataDasarView</span>
       </a>
     </router-link>
+    <router-link tag="li" class="pageLink" to="/publikasiView">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">publikasiView</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/abmasView">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">abmasView</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/dosenView">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">dosenView</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/penelitianView">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">penelitianView</span>
+      </a>
+    </router-link>
     <router-link tag="li" class="pageLink" to="/JenisSatkerView">
       <a>
         <i class="fa fa-desktop"></i>

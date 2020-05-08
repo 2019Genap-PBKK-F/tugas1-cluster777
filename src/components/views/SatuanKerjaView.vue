@@ -49,7 +49,7 @@ export default {
             { type: 'text', title: 'create_date', width: '120px' },
             { type: 'text', title: 'last_update', width: '120px' },
             { type: 'text', title: 'expired_date', width: '120px' },
-			      { type: 'text', title: 'email', width: '120px' }
+            { type: 'text', title: 'email', width: '120px' }
           ]
         }
         let spreadsheet = jexcel(this.$el, jexcelOptions)
@@ -72,7 +72,7 @@ export default {
           id_induk_satker: index[2],
           nama: index[3],
           email: index[8],
-		      level_unit: index[4]
+          level_unit: index[4]
         }).then(res => {
           console.log(res.data)
         })
