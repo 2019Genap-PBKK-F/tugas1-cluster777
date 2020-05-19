@@ -3,7 +3,7 @@
 </template>
 <script>
 import axios from 'axios'
-var host = 'http://127.0.0.1:8009/'
+var host = 'http://10.199.14.46:8009/'
 
 import WebDataRocks from 'webdatarocks'
 export default {
@@ -11,8 +11,11 @@ export default {
     axios.get(host + 'api/penelitian/').then(res => {
       console.log(res.data)
       this.webdatarocks = new WebDataRocks({
-        report: { data: res.data },
-        container: this.$el
+        report: {
+          data: res.data
+        },
+        container: this.$el,
+        toolbar: true
       })
     })
   },

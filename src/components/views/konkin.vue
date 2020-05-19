@@ -1,14 +1,15 @@
 <template>
   <div>
     <div>
-        <input type="button" value="Add New Row" @click="() => spreadsheet.insertRow()" />
-        <input type="button" value="Delete Selected Row" @click="() => spreadsheet.deleteRow()" />
         <select v-model="selected" class='form-control' @change="onChange($event)">
           <option  v-for="data in fkSatker"  v-bind:value="data.id">
             {{ data.nama }}
           </option>
         </select>
     </div>
+    <div><img src="https://www.its.ac.id/wp-content/uploads/2019/02/Badge_ITS.png" alt="its logo" width="100" height="100"></div>
+    <div>KONTRAK KINERJA TAHUN 2020</div>
+    <div>Kepala Departemen {{ selected }}</div>	
     <div id="spreadsheet" ref="spreadsheet"></div>
   </div>
 </template>
@@ -43,7 +44,7 @@ export default {
         console.log(res.data)
         this.fkSatker = Object.values(res.data)
       })
-      axios.get(host + 'api/Indikator_SatuanKerja/').then(res => {
+      axios.get(host + 'api/konkin/').then(res => {
         console.log(res.data)
         var jexcelOptions = {
           data: res.data,
@@ -52,15 +53,15 @@ export default {
           oninsertrow: this.newRow,
           ondeleterow: this.deleteRow,
           responsive: true,
+          editable: false,
           columns: [
 
-            { type: 'hidden', title: 'id', width: '10px' },
-            { type: 'text', title: 'id_indikator_periode', width: '120px' },
-            { type: 'text', title: 'id_satker', width: '120px' },
+            { type: 'text', title: 'aspek', width: '120px' },
+            { type: 'text', title: 'komponen aspek', width: '120px' },
+            { type: 'text', title: 'indikator kinerja', width: '360px' },
             { type: 'text', title: 'bobot', width: '120px' },
-            { type: 'text', title: 'target', width: '120px' },
-            { type: 'text', title: 'capaian', width: '120px' },
-            { type: 'text', title: 'last_update', width: '120px' }
+            { type: 'text', title: 'target', width: '200px' },
+            { type: 'text', title: 'capaian', width: '200px' }
           ]
         }
         let spreadsheet = jexcel(document.getElementById('spreadsheet'), jexcelOptions)
@@ -70,7 +71,7 @@ export default {
     onChange(event) {
       console.log(event.target.value)
       document.getElementById('spreadsheet').innerHTML = ''
-      axios.get(host + 'api/Indikator_SatuanKerja_selective/' + event.target.value).then(res => {
+      axios.get(host + 'api/konkin/' + event.target.value).then(res => {
         console.log(res.data)
         var jexcelOptions = {
           data: res.data,
@@ -79,41 +80,15 @@ export default {
           oninsertrow: this.newRow,
           ondeleterow: this.deleteRow,
           responsive: true,
+          editable: false,
           columns: [
 
-            { type: 'hidden', title: 'id', width: '10px' },
-            { type: 'text', title: 'id_indikator_periode', width: '120px' },
-            { type: 'text', title: 'id_satker', width: '120px' },
+            { type: 'text', title: 'aspek', width: '120px' },
+            { type: 'text', title: 'komponen aspek', width: '120px' },
+            { type: 'text', title: 'indikator kinerja', width: '360px' },
             { type: 'text', title: 'bobot', width: '120px' },
-            { type: 'text', title: 'target', width: '120px' },
-            { type: 'text', title: 'capaian', width: '120px' },
-            { type: 'text', title: 'last_update', width: '120px' }
-          ]
-        }
-        let spreadsheet = jexcel(document.getElementById('spreadsheet'), jexcelOptions)
-        Object.assign(this, { spreadsheet })
-      })
-    },
-    getsatker() {
-      axios.get(host + 'api/Indikator_SatuanKerja/' + this.filterSatker).then(res => {
-        console.log(res.data)
-        this.dataIndikator = Object.values(res.data)
-        var jexcelOptions = {
-          data: res.data,
-          allowToolbar: true,
-          onchange: this.updateRow,
-          oninsertrow: this.newRow,
-          ondeleterow: this.deleteRow,
-          responsive: true,
-          columns: [
-
-            { type: 'hidden', title: 'id', width: '10px' },
-            { type: 'text', title: 'id_indikator_periode', width: '120px' },
-            { type: 'text', title: 'id_satker', width: '120px' },
-            { type: 'text', title: 'bobot', width: '120px' },
-            { type: 'text', title: 'target', width: '120px' },
-            { type: 'text', title: 'capaian', width: '120px' },
-            { type: 'text', title: 'last_update', width: '120px' }
+            { type: 'text', title: 'target', width: '200px' },
+            { type: 'text', title: 'capaian', width: '200px' }
           ]
         }
         let spreadsheet = jexcel(document.getElementById('spreadsheet'), jexcelOptions)

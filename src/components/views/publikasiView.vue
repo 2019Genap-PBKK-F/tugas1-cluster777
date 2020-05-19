@@ -14,7 +14,8 @@ export default {
         report: {
           data: res.data
         },
-        container: this.$el
+        container: this.$el,
+        toolbar: true
       })
     })
   },

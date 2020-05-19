@@ -24,7 +24,7 @@ import CapaianUnitView from './components/views/Capaian_UnitView.vue'
 import IndikatorSatuanKerjaView from './components/views/Indikator_SatuanKerjaView.vue'
 import IndikatorSatuanKerjaLogView from './components/views/Indikator_SatuanKerja_LogView.vue'
 import MasterIndikatorFullView from './components/views/MasterIndikatorFullView.vue'
-
+import konkin from './components/views/konkin.vue'
 import publikasiView from './components/views/publikasiView.vue'
 import abmasView from './components/views/abmasView.vue'
 import dosenView from './components/views/dosenView.vue'
@@ -65,6 +65,11 @@ const routes = [
         component: abmasView,
         name: 'abmasView',
         meta: {description: 'abmasView in CoPilot'}
+      }, {
+        path: 'konkin',
+        component: konkin,
+        name: 'konkin',
+        meta: {description: 'konkin in CoPilot'}
       }, {
         path: 'dosenView',
         component: dosenView,

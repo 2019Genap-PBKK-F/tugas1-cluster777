@@ -11,8 +11,11 @@ export default {
     axios.get(host + 'api/dosen/').then(res => {
       console.log(res.data)
       this.webdatarocks = new WebDataRocks({
-        report: { data: res.data },
-        container: this.$el
+        report: {
+          data: res.data
+        },
+        container: this.$el,
+        toolbar: true
       })
     })
   },

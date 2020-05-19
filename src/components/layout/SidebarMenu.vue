@@ -19,6 +19,12 @@
         <span class="page">DataDasarView</span>
       </a>
     </router-link>
+    <router-link tag="li" class="pageLink" to="/konkin">
+      <a>
+        <i class="fa fa-desktop"></i>
+        <span class="page">konkin</span>
+      </a>
+    </router-link>
     <router-link tag="li" class="pageLink" to="/publikasiView">
       <a>
         <i class="fa fa-desktop"></i>
