@@ -17,14 +17,6 @@
           <notifications-menu></notifications-menu>
           <tasks-menu></tasks-menu>
           <user-menu :user="user"></user-menu>
-          <li class="user-footer">
-            <div>
-              <button v-on:click="logouut()">
-                <i class>"fa fa-sign-out"></i>
-                <span>logout</span>
-              </button>
-            </div>
-          </li>
         </ul>
       </div>
     </nav>
@@ -47,18 +39,6 @@ export default {
     UserMenu
   },
   props: ['user'],
-  methods: {
-    logouut: function() {
-      this.$store.commit('SET_USER', null)
-      this.$store.commit('SET_TOKEN', null)
-
-      if (window.localStorage) {
-        window.localStorage.setItem('user', null)
-        window.localStorage.setItem('token', null)
-      }
-      this.$router.push('/login')
-    }
-  },
   computed: {
     ...mapState([
       'userInfo'

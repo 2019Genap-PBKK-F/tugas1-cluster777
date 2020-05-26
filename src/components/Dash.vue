@@ -60,9 +60,9 @@ export default {
   computed: {
     user () {
       return {
-        displayName: faker.name.findName(),
+        displayName: window.localStorage.getItem('user'),
         avatar: faker.image.avatar(),
-        roles: [faker.name.jobTitle(), faker.name.jobTitle()]
+        roles: ['roles', 'roles2']
       }
     }
   }

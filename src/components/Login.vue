@@ -73,14 +73,15 @@ export default {
             var token = 'Bearer ' + data.token
             console.log('Nama = ' + data.nama)
             console.log('Token = ' + data.token)
-
+            console.log(data.id)
             this.$store.commit('SET_USER', data.nama)
             this.$store.commit('SET_TOKEN', token)
 
             if (window.localStorage) {
               console.log('Set Local Storage')
-              window.localStorage.setItem('user', Object.values(data.nama))
+              window.localStorage.setItem('user', data.nama)
               window.localStorage.setItem('token', token)
+              window.localStorage.setItem('iduser', data.id)
             }
 
             this.$router.push(data.redirect ? data.redirect : '/')

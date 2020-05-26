@@ -157,7 +157,8 @@ const routes = [
         meta: {description: 'List of popular javascript repos'}
       }
     ]
-  }, {
+  },
+  {
     // not found handler
     path: '*',
     component: NotFoundView

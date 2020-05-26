@@ -35,9 +35,7 @@ var router = new VueRouter({
 
 // Some middleware to help us ensure the user is authenticated.
 router.beforeEach((to, from, next) => {
-  if (
-    to.matched.some(record => record.meta.requiresAuth) &&
-    (!router.app.$store.state.token || router.app.$store.state.token === 'null')
+  if ((to.path !== '/login' && to.path !== '/') && (!router.app.$store.state.token || router.app.$store.state.token == null)
   ) {
     // this route requires auth, check if logged in
     // if not, redirect to login page.
@@ -55,13 +53,7 @@ sync(store, router)
 
 // Check local storage to handle refreshes
 if (window.localStorage) {
-  var localUserString = window.localStorage.getItem('user') || 'null'
-  var localUser = JSON.parse(localUserString)
-
-  if (localUser && store.state.user !== localUser) {
-    store.commit('SET_USER', localUser)
-    store.commit('SET_TOKEN', window.localStorage.getItem('token'))
-  }
+  window.console.log('Not ok')
 }
 
 // Start out app!
